@@ -193,16 +193,15 @@ em { font-style: italic; color: var(--green-500); }
 .review-card figcaption { color: var(--muted); font-size: 0.95rem; margin-top: auto; }
 .reviews-note { text-align: center; color: var(--muted); font-style: italic; margin-top: 2.2rem; font-family: var(--font-head); font-size: 1.1rem; }
 
-/* Gallery */
-.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; gap: 1.1rem; }
+/* Gallery — portrait tiles matched to the 3:4 photos so nothing important is cropped */
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
 .gallery-item {
   position: relative; overflow: hidden; border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm); background: var(--green-200);
+  box-shadow: var(--shadow-sm); background: var(--green-100);
+  aspect-ratio: 3 / 4;
 }
-.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
-.gallery-item:hover img { transform: scale(1.06); }
-.gallery-item--tall { grid-row: span 2; }
-.gallery-item--wide { grid-column: span 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.6s var(--ease); }
+.gallery-item:hover img { transform: scale(1.04); }
 .gallery-item figcaption {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: 1.4rem 1.1rem 0.9rem; color: var(--white); font-family: var(--font-head); font-size: 1.2rem;
@@ -282,9 +281,7 @@ em { font-style: italic; color: var(--green-500); }
   .reviews-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
-  .gallery-item--wide { grid-column: span 2; }
-  .gallery-item--tall { grid-row: span 1; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
   .hero-art { max-width: 460px; margin: 0 auto; }
 
   .nav-toggle { display: flex; }
@@ -343,8 +340,8 @@ em { font-style: italic; color: var(--green-500); }
 
   .program-card { padding: 1.8rem 1.4rem; }
   .program-cols { grid-template-columns: 1fr; gap: 0.4rem 1.4rem; }
-  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 260px; }
-  .gallery-item--wide { grid-column: span 1; }
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .gallery-item figcaption { font-size: 1rem; padding: 1rem 0.8rem 0.7rem; }
   .review-card { padding: 1.7rem 1.5rem; }
   .review-card blockquote { font-size: 1.2rem; }
   .contact-list li { grid-template-columns: 1fr; gap: 0.2rem; }
