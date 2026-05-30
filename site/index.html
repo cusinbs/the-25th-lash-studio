@@ -55,7 +55,7 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text reveal">
-        <p class="eyebrow">Lashes · Brows · Lash Training · Est. 2025</p>
+        <p class="eyebrow"><span class="nowrap">Lashes</span> · <span class="nowrap">Brows</span> · <span class="nowrap">Lash Training</span> · <span class="nowrap">Est. 2025</span></p>
         <h1>Beauty that feels<br /><em>personal &amp; effortless</em></h1>
         <p class="hero-sub">
           A luxury lash &amp; brow studio founded by Thi, with 8+ years of
@@ -384,6 +384,15 @@
       <p class="footer-copy">© <span id="year"></span> The 25th Lash Studio · Est. 2025. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox (image preview) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox__close" type="button" aria-label="Close preview">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous image">&#8249;</button>
+    <img class="lightbox__img" src="" alt="" />
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next image">&#8250;</button>
+    <p class="lightbox__caption"></p>
+  </div>
 
   <!-- Mobile-only sticky booking bar -->
   <div class="mobile-cta" aria-hidden="false">
