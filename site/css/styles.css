@@ -274,7 +274,11 @@ em { font-style: italic; color: var(--green-500); }
 /* ----------------------------- Responsive ----------------------------- */
 @media (max-width: 900px) {
   .hero-inner, .about-grid, .contact-grid { grid-template-columns: 1fr; }
-  .about-media { order: -1; max-width: 460px; }
+  /* Text first so the "About" anchor lands on the heading, not the photo */
+  .about-text { order: -1; }
+  .about-media { max-width: 100%; }
+  /* Compact landscape banner instead of a screen-filling portrait */
+  .about-media img { aspect-ratio: 16 / 10; max-height: 300px; object-position: center 38%; }
   .reviews-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .program-grid { grid-template-columns: 1fr; }
