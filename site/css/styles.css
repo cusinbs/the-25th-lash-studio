@@ -261,6 +261,13 @@ em { font-style: italic; color: var(--green-500); }
 body.lightbox-open { overflow: hidden; }
 
 /* Academy */
+/* Two clickable training photos that lead into the programs — reuse the gallery
+   tile look (.gallery-item) so they match the Pictures section and open the lightbox. */
+.academy-gallery {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem;
+  max-width: 700px; margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+}
+.academy-gallery .gallery-item img { object-position: center 32%; }
 .program-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-bottom: clamp(2.5rem, 5vw, 3.5rem); }
 .program-card {
   background: var(--white); border: 1px solid var(--green-200); border-radius: var(--radius);
